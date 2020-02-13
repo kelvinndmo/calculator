@@ -1,22 +1,30 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-weight: normal;
 }
 
-body{
-  padding: 0;
-  margin: 0;
-  background:linear-gradient(to right, green, #00FF6C);
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to right, rgb(15, 15, 15), #17d365); */
 }
 
-.calculator-grid{
+.calculator-grid {
+  position: relative;
   display: grid;
   justify-content: center;
+  margin-top: 50px;
   align-content: center;
-  min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+  border: solid 1px #97d8b2;
+  border-radius: 0.5rem;
 }
 
 .calculator-grid > button {
@@ -24,33 +32,41 @@ body{
   font-size: 2rem;
   border: 1px solid white;
   outline: none;
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, 0.75);
+  /* padding: 2rem; */
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  align-content: center;
+  border: solid 1px #97d8b2;
 }
 
-.calculator-grid > button:hover{
-  background-color:rgba(255, 255, 2555, .9);
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 2555, 0.9);
 }
-.span-two{
+.span-two {
   grid-column: span 2;
 }
 
-.output{
+.output {
   grid-column: 1/-1;
-  background-color: rgba(0, 0,0, .75);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: solid 1px #97d8b2;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
   flex-direction: column;
   padding: 10px;
-  word-wrap:break-word;
+  word-wrap: break-word;
   word-break: break-all;
+  border-radius: 0.5rem;
+  margin-bottom: -0.3rem;
 }
 
-.output .previous-operand{
-  color: rgba(255,255, 255, .75);
+.output .previous-operand {
+  /* color: rgba(255, 255, 255, 0.75); */
   font-size: 1.5rem;
 }
-.output .current-operand{
-  color: white;
+.output .current-operand {
+  /* color: white; */
   font-size: 2.5rem;
 }

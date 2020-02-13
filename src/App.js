@@ -109,65 +109,67 @@ class App extends React.Component {
   render() {
     const { currentValue, previousValue, operation } = this.state;
     return (
-      <div className="calculator-grid">
-        <div className="output">
-          <div className="previous-operand">{`${this.getDisplayNumber(
-            previousValue
-          )} ${operation}`}</div>
-          <div className="current-operand">{currentValue}</div>
+      <div class="calc">
+        <div className="calculator-grid">
+          <div className="output">
+            <div className="previous-operand">{`${this.getDisplayNumber(
+              previousValue
+            )} ${operation}`}</div>
+            <div className="current-operand">{currentValue}</div>
+          </div>
+          <button onClick={this.clear} className="span-two">
+            AC
+          </button>
+          <button onClick={this.delete}>DEL</button>
+          <button onClick={this.chooseOperation} value="/">
+            /
+          </button>
+          <button value={1} onClick={this.appendNumber}>
+            1
+          </button>
+          <button value={2} onClick={this.appendNumber}>
+            2
+          </button>
+          <button value={3} onClick={this.appendNumber}>
+            3
+          </button>
+          <button onClick={this.chooseOperation} value={"*"}>
+            *
+          </button>
+          <button value={4} onClick={this.appendNumber}>
+            4
+          </button>
+          <button value={5} onClick={this.appendNumber}>
+            5
+          </button>
+          <button value={6} onClick={this.appendNumber}>
+            6
+          </button>
+          <button onClick={this.chooseOperation} value={"+"}>
+            +
+          </button>
+          <button value={7} onClick={this.appendNumber}>
+            7
+          </button>
+          <button value={8} onClick={this.appendNumber}>
+            8
+          </button>
+          <button value={9} onClick={this.appendNumber}>
+            9
+          </button>
+          <button onClick={this.chooseOperation} value={"-"}>
+            -
+          </button>
+          <button value={"."} onClick={this.appendNumber}>
+            .
+          </button>
+          <button value={0} onClick={this.appendNumber}>
+            0
+          </button>
+          <button onClick={this.equalsSign} className="span-two">
+            =
+          </button>
         </div>
-        <button onClick={this.clear} className="span-two">
-          AC
-        </button>
-        <button onClick={this.delete}>DEL</button>
-        <button onClick={this.chooseOperation} value="/">
-          /
-        </button>
-        <button value={1} onClick={this.appendNumber}>
-          1
-        </button>
-        <button value={2} onClick={this.appendNumber}>
-          2
-        </button>
-        <button value={3} onClick={this.appendNumber}>
-          3
-        </button>
-        <button onClick={this.chooseOperation} value={"*"}>
-          *
-        </button>
-        <button value={4} onClick={this.appendNumber}>
-          4
-        </button>
-        <button value={5} onClick={this.appendNumber}>
-          5
-        </button>
-        <button value={6} onClick={this.appendNumber}>
-          6
-        </button>
-        <button onClick={this.chooseOperation} value={"+"}>
-          +
-        </button>
-        <button value={7} onClick={this.appendNumber}>
-          7
-        </button>
-        <button value={8} onClick={this.appendNumber}>
-          8
-        </button>
-        <button value={9} onClick={this.appendNumber}>
-          9
-        </button>
-        <button onClick={this.chooseOperation} value={"-"}>
-          -
-        </button>
-        <button value={"."} onClick={this.appendNumber}>
-          .
-        </button>
-        <button value={0} onClick={this.appendNumber}>
-          0
-        </button>
-        <button onClick={this.equalsSign} className="span-two">
-          =
-        </button>
       </div>
     );
   }
