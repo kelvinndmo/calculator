@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/kelvinndmo/calculator.svg?branch=master)](https://travis-ci.org/kelvinndmo/calculator)
 [![Coverage Status](https://coveralls.io/repos/github/kelvinndmo/calculator/badge.svg?branch=master)](https://coveralls.io/github/kelvinndmo/calculator?branch=master)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
