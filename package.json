@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "coveralls": "react-scripts test --coverage && cat ./tests/coverage/lcov.info | coveralls",
     "coverage": "react-scripts test --coverage --coveragePathIgnorePatterns=src/index.js --coveragePathIgnorePatterns=src/serviceWorker.js",
     "eject": "react-scripts eject"
   },
