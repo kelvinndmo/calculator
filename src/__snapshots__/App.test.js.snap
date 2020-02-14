@@ -2,7 +2,7 @@
 
 exports[`should render the component App 1`] = `
 <div
-  class="calc"
+  className="calc"
 >
   <div
     className="calculator-grid"

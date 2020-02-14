@@ -25,7 +25,7 @@ class App extends React.Component {
     let operation = e.target.value;
     if (currentValue === "") return;
     if (previousValue !== "") {
-      this.calculate();
+      return this.calculate();
     }
 
     this.setState({ operation });
@@ -96,6 +96,7 @@ class App extends React.Component {
       default:
         computation = "";
     }
+
     this.setState({ currentValue: computation });
     this.setState({ operation: "" });
     this.setState({ previousValue: "" });
@@ -109,7 +110,7 @@ class App extends React.Component {
   render() {
     const { currentValue, previousValue, operation } = this.state;
     return (
-      <div class="calc">
+      <div className="calc">
         <div className="calculator-grid">
           <div className="output">
             <div className="previous-operand">{`${this.getDisplayNumber(

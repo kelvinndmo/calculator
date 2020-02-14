@@ -174,6 +174,12 @@ test("should automatically calculate when more than one operation is passed", ()
     });
   wrapper
     .find("button")
+    .at(14)
+    .simulate("click", {
+      target: { value: "-" }
+    });
+  wrapper
+    .find("button")
     .at(4)
     .simulate("click", {
       target: { value: "2" }
